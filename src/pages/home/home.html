@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Verifique seu IMC
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item-divider color="light">
+      Informe os Dados Pedidos a seguir:
+  </ion-item-divider>
+  <ion-item>
+    <ion-label color="primary" floating>Altura</ion-label>
+    <ion-input [(ngModel)]="Altura"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="sucess" floating>Peso</ion-label>
+    <ion-input [(ngModel)]="Peso"></ion-input>
+  </ion-item>
+  
+      <ion-item-divider color="light">
+        Resultado:
+        <ion-item>{{resultado}}</ion-item>
+        <ion-item>{{calculo}}</ion-item>
+    </ion-item-divider>
+
+<button ion-button full (click)="calculoIMC()">Calcular</button>
+
+</ion-content>
